@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     atmwindow.cpp \
+    generatoraccount.cpp \
     main.cpp \
     mainwindow.cpp \
     payservice.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     atmwindow.h \
+    generatoraccount.h \
     mainwindow.h \
     payservice.h \
     tradewindow.h
 
 FORMS += \
     atmwindow.ui \
+    generatoraccount.ui \
     mainwindow.ui \
     payservice.ui \
     tradewindow.ui

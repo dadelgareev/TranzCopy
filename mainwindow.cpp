@@ -7,6 +7,7 @@
 #include "atmwindow.h"
 #include "tradewindow.h"
 #include "payservice.h"
+#include "generatoraccount.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,18 +28,20 @@ void MainWindow::updateListWidget() {
 
     // Добавляем все счета с их балансами из QMap balances в QListWidget
     for (auto it = balances.begin(); it != balances.end(); ++it) {
-        QString itemText = it.key() + " - Баланс: " + QString::number(it.value());
+        QString bill = it.key();
+        QString type = tokenAccount.value(bill);
+        double balance = it.value();
+
+        QString itemText = "Тип счета: " + type + " Номер счета: " + bill + " - Баланс: " + QString::number(balances.value(bill));
         ui->listWidget->addItem(itemText);
     }
 }
 
 void MainWindow::on_generationAccount_clicked()
 {
-    QString bill = "Счет #" + QString::number(ui->listWidget->count() + 1);
-    balances.insert(bill, 0.0);
-    transactionHistory.insert(bill, QList<QString>());
-    QString itemText = bill + " - Баланс: " + QString::number(balances.value(bill));
-    ui->listWidget->addItem(itemText);
+    generatorAccount generatoraccount(balances,transactionHistory ,ui->listWidget, tokenAccount);
+    connect(&generatoraccount, &generatorAccount::balanceUpdatedSignal, this, &MainWindow::updateListWidget);
+    generatoraccount.exec();
 }
 
 
