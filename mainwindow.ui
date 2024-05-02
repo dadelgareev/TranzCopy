@@ -134,7 +134,7 @@
  счета</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="authButton">
+   <widget class="QPushButton" name="changeAuthButton">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -149,26 +149,24 @@
      </font>
     </property>
     <property name="text">
-     <string>Аутентификация</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="changeAuthButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>340</y>
-      <width>151</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
      <string>Сменить
 аунтефикацию</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>370</y>
+      <width>271</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/tranzcopy.png</pixmap>
     </property>
    </widget>
   </widget>
