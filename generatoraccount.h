@@ -16,7 +16,7 @@ class generatorAccount : public QDialog
     Q_OBJECT
 
 public:
-    explicit generatorAccount(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QMap<QString, QString> &tokenAccount ,QWidget *parent = nullptr);
+    explicit generatorAccount(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QMap<QString, QString> &tokenAccount,QMap<QString, double> &creditLimit ,QWidget *parent = nullptr);
     ~generatorAccount();
 
 private slots:
@@ -32,6 +32,7 @@ private:
     QListWidget *listWidget;
     QVector<QString> classAccount;
     QMap<QString, QString> &tokenAccount;
+    QMap<QString, double> &creditLimit;
 
 };
 

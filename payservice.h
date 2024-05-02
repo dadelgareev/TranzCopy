@@ -16,7 +16,7 @@ class payservice : public QDialog
     Q_OBJECT
 
 public:
-    explicit payservice(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QWidget *parent = nullptr);
+    explicit payservice(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QMap<QString, QString> &tokenAccount,QMap<QString, double> &creditLimit, QWidget *parent = nullptr);
     QVector<QString> arrayService;
     ~payservice();
 
@@ -31,6 +31,8 @@ private:
     QMap<QString, double> &balances;
     QMap<QString, QList<QString>> &transactionHistory;
     QListWidget *listWidget;
+    QMap<QString, QString> &tokenAccount;
+    QMap<QString, double> &creditLimit;
 };
 
 #endif // PAYSERVICE_H

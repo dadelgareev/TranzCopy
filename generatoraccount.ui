@@ -46,8 +46,8 @@
     <rect>
      <x>10</x>
      <y>90</y>
-     <width>191</width>
-     <height>16</height>
+     <width>381</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -56,14 +56,15 @@
     </font>
    </property>
    <property name="text">
-    <string>Стартовый баланс счета:</string>
+    <string>Стартовый баланс счета/
+Кредитный лимит:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>200</y>
+     <y>230</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -77,10 +78,21 @@
     <string>Сгенерировать счет</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>211</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
   <zorder>pushButton</zorder>
   <zorder>comboBox</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
+  <zorder>lineEdit</zorder>
  </widget>
  <resources/>
  <connections/>

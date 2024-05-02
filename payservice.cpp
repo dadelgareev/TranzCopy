@@ -2,12 +2,14 @@
 #include "ui_payservice.h"
 #include <QMessageBox>
 
-payservice::payservice(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QWidget *parent) :
+payservice::payservice(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QMap<QString, QString> &tokenAccount,QMap<QString, double> &creditLimit, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::payservice),
     balances(balances),
     transactionHistory(transactionHistory),
-    listWidget(listWidget)
+    listWidget(listWidget),
+    tokenAccount(tokenAccount),
+    creditLimit(creditLimit)
 {
     ui->setupUi(this);
 

@@ -2,12 +2,15 @@
 #include "ui_tradewindow.h"
 #include <QMessageBox>
 
-tradewindow::tradewindow(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QWidget *parent) :
+tradewindow::tradewindow(QMap<QString, double> &balances, QMap<QString, QList<QString>> &transactionHistory, QListWidget *listWidget, QMap<QString, QString> &tokenAccount,QMap<QString, double> &creditLimit, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::tradewindow),
     balances(balances),
     transactionHistory(transactionHistory),
-    listWidget(listWidget)
+    listWidget(listWidget),
+    tokenAccount(tokenAccount),
+    creditLimit(creditLimit)
+
 {
     ui->setupUi(this);
     // Ваш код для заполнения комбо-бокса номерами счетов

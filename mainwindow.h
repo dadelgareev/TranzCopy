@@ -33,12 +33,20 @@ private slots:
 
     void on_payServiceButton_clicked();
 
+    void on_balancedAccountButton_clicked();
+
+    void on_authButton_clicked();
+
+
+    void on_changeAuthButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QMap<QString, double> balances;
     QMap<QString, QList<QString>> transactionHistory;
     QMap<QString, QString> tokenAccount;
-
+    QMap<QString, double> creditLimit;
+    QMap<QString, QString> timeCreation;
 
 
 };

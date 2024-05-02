@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1176</width>
+    <height>613</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,7 +55,7 @@
      <rect>
       <x>305</x>
       <y>10</y>
-      <width>471</width>
+      <width>761</width>
       <height>311</height>
      </rect>
     </property>
@@ -115,6 +115,62 @@
      <string>Оплат услуг</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="balancedAccountButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Балансировка
+ счета</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="authButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Аутентификация</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="changeAuthButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>340</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Сменить
+аунтефикацию</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -122,7 +178,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1176</width>
      <height>21</height>
     </rect>
    </property>
